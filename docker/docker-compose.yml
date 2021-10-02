@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  node:
+    container_name: node
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../:/usr/local/app/
+      - /usr/local/app/node_modules/
+    ports:
+      - '80:80'
